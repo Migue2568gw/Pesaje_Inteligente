@@ -67,9 +67,11 @@ namespace Pesaje_Inteligente
                 empresas.Ciudad = txtCiudad.Text;
                 empresas.Departamento = txtDepartamento.Text;
                 empresas.Pais = txtPais.Text;
-                empresas.FechaCreacion = DateTime.UtcNow;
+
                 if (bandera)
-                    empresas.FechaModificacion = DateTime.UtcNow;
+                { empresas.FechaModificacion = DateTime.Now; }
+                else
+                { empresas.FechaCreacion = DateTime.Now; }
 
                 try
                 {
